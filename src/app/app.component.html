@@ -22,7 +22,7 @@
       <div *ngFor="let logItem of log;let i = index"
            [ngStyle]="{backgroundColor : i > 3 ? 'blue' : 'transparent'}"
            [ngClass]="{'white-text': i > 3}">
-        {{ logItem }}
+        {{ logItem | date : 'MMMM d, y, h:mm:ss a z' }}
       </div>
     </div>
   </div>
